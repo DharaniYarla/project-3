@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="box">
+      <h3>👆Press. 🌈💫 Colors. 😄🌟 Smile.</h3>
+      <br />
+      <button onclick="changeColor()">Button</button>
+    </div>
+    <script>
+      function changeColor() {
+        var color = getRandomColor();
+        document.body.style.background = color;
+      }
+
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    </script>
+  </body>
+</html>
